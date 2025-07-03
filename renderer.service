@@ -1,0 +1,16 @@
+[Unit]
+Description=E-Paper Renderer Service
+After=multi-user.target network-online.target ssh.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/user/e-Paper/RaspberryPi_JetsonNano/python/examples/renderer.py
+Restart=always
+RestartSec=10
+Environment=DISPLAY=:0
+Environment=HOME=/root
+Environment=XDG_RUNTIME_DIR=/run/user/0
+
+[Install]
+WantedBy=multi-user.target
