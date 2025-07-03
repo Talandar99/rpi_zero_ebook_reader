@@ -1,4 +1,5 @@
 # Raspberry Pi Zero E-Ink ebook reader
+![Working Prototype](working_prototype.png)
 ## About project
 This project was created in haste in under two weeks. I didn’t even have time to put the project on GitHub before. \
 The project itself exists because of two things:
