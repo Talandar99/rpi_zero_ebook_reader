@@ -30,12 +30,9 @@ so I decided I could make a better one. Currently, it’s not perfect, but at le
 
 ### OpenSCAD Case Design
 I created a simple case to limit battery movement.  
-![3D Case Design](3d_design.png)
-
 ![3D Case Design](rpi_case.scad)
-
-
-### Fully Assembled
+![3D Case Design](3d_design.png)
+Fully Assembled:
 ![Fully Assembled Device](assembled.jpg)
 
 ## Flashing image 
