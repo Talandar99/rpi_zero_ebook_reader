@@ -36,13 +36,13 @@ I created a simple case (in OpenSCAD) to limit battery movement: ![rpi_case.scad
 ![Fully Assembled Device](assembled.jpg)
 
 ## Flashing image 
-![Flashing 1](flashing_01.jpg)
-![Flashing 2](flashing_02.jpg)
-![Flashing 3](flashing_03.jpg)
-![Flashing 4](flashing_04.jpg)
-![Flashing 5](flashing_05.jpg)
-![Flashing 6](flashing_06.jpg)
-![Flashing 7](flashing_07.jpg)
+![Flashing 1](flashing_01.png)
+![Flashing 2](flashing_02.png)
+![Flashing 3](flashing_03.png)
+![Flashing 4](flashing_04.png)
+![Flashing 5](flashing_05.png)
+![Flashing 6](flashing_06.png)
+![Flashing 7](flashing_07.png)
 
 ## Connecting to Raspberry Pi with ssh
 ### Finding the Raspberry Pi's Address Using Nmap
