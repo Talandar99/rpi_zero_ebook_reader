@@ -179,10 +179,18 @@ sudo nvim /etc/X11/xorg.conf.d/10-dummy.conf
 And add the following configuration: [10-dummy.conf](10-dummy.conf)
 
 ## Creating Renderer:
-Create a new file:
+Create a new file, and paste this content: [renderer.py](renderer.py)
 ```bash
 nvim /home/user/e-Paper/RaspberryPi_JetsonNano/python/examples/renderer.py
 ```
+### What does this code do?
+- Starts a virtual display server (`Xorg`) and a window manager (`i3`) if they are not running.
+- Opens a PDF viewer (`zathura`) to display a document.
+- Periodically captures a screenshot of the virtual desktop.
+- Compares it to the previous image using histogram difference.
+- Updates the e-paper display only if the screen has changed.
+- Minimizes unnecessary e-paper updates to reduce annoying flickering
+
 ## Renderer - Running
 Let's quickly go back to your computer and transfer the book:
 ```bash
