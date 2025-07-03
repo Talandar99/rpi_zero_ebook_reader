@@ -36,18 +36,18 @@ I created a simple case (in OpenSCAD) to limit battery movement: ![rpi_case.scad
 ![Fully Assembled Device](images/assembled.jpg)
 
 ## Flashing image 
-Flash raspberry os
+Flash raspberry os\
 ![Flashing 1](images/flashing_01.png)
 ![Flashing 2](images/flashing_02.png)
 
-Add settings for automatic connection to WiFi 
+Add settings for automatic connection to WiFi \
 ![Flashing 3](images/flashing_03.png)
 
-Enable SSH daemon
+Enable SSH daemon\
 ![Flashing 4](images/flashing_04.png)
 ![Flashing 5](images/flashing_05.png)
 
-Save Options
+Save Options\
 ![Flashing 6](images/flashing_06.png)
 ![Flashing 7](images/flashing_07.png)
 
