@@ -1,5 +1,5 @@
 # Raspberry Pi Zero E-Ink ebook reader
-![Working Prototype](working_prototype.png)
+![Working Prototype](images/working_prototype.png)
 ## About project
 This project was created in haste in under two weeks. I didn’t even have time to put the project on GitHub before. \
 The project itself exists because of two things:
@@ -33,16 +33,16 @@ so I decided I could make a better one. Currently, it’s not perfect, but at le
 ### OpenSCAD Case Design
 I created a simple case (in OpenSCAD) to limit battery movement: ![rpi_case.scad](rpi_case.scad)
 ![3D Case Design](3d_design.png)
-![Fully Assembled Device](assembled.jpg)
+![Fully Assembled Device](images/assembled.jpg)
 
 ## Flashing image 
-![Flashing 1](flashing_01.png)
-![Flashing 2](flashing_02.png)
-![Flashing 3](flashing_03.png)
-![Flashing 4](flashing_04.png)
-![Flashing 5](flashing_05.png)
-![Flashing 6](flashing_06.png)
-![Flashing 7](flashing_07.png)
+![Flashing 1](images/flashing_01.png)
+![Flashing 2](images/flashing_02.png)
+![Flashing 3](images/flashing_03.png)
+![Flashing 4](images/flashing_04.png)
+![Flashing 5](images/flashing_05.png)
+![Flashing 6](images/flashing_06.png)
+![Flashing 7](images/flashing_07.png)
 
 ## Connecting to Raspberry Pi with ssh
 ### Finding the Raspberry Pi's Address Using Nmap
@@ -104,13 +104,13 @@ To change Raspberry Pi settings, use the dedicated **menuconfig** tool provided 
 sudo raspi-config
 ```
 ### Enabling SPI – Step 1
-![SPI Config Step 1](spi1.png)
+![SPI Config Step 1](images/spi1.png)
 ### Enabling SPI – Step 1
-![SPI Config Step 2](spi2.png)
+![SPI Config Step 2](images/spi2.png)
 ### Enabling SPI – Step 1
-![SPI Config Step 3](spi3.png)
+![SPI Config Step 3](images/spi3.png)
 ### Enabling SPI – Step 1
-![SPI Config Step 4](spi4.png)
+![SPI Config Step 4](images/spi4.png)
 
 Reboot the system:
 ```bash
@@ -197,12 +197,28 @@ Ideally, it should start automatically when the system boots.
 - A systemd daemon runs continuously in the background, managing processes and system resources.
 - It allows defining services via unit files that control their behavior.
 - Provides fast system startup and automatic service restarts in case of failures.
-### Creating a systemd Service - Code
+## Creating a systemd Service 
 Create a new file:
 ```bash
 sudo nvim /etc/systemd/system/renderer.service
 ```
 and add following content [renderer.service](renderer.service)
+### Starting the systemd daemon
+After saving the service file:
+```bash
+sudo systemctl daemon-reexec
+sudo systemctl enable renderer.service
+sudo systemctl start renderer.service
+```
+Checking the status:
+```bash
+sudo systemctl status renderer.service
+```
+Checking Logs:
+```bash
+journalctl -u renderer.service
+```
+### Creating a systemd Service - Code Explanation
 ## \[Unit\] Section
 - `Description` – service description shown during service management.  
 - `After` – defines startup order; this service starts after:  
@@ -222,20 +238,3 @@ and add following content [renderer.service](renderer.service)
 ## \[Install\] Section
 - `WantedBy=multi-user.target` – specifies the service should start automatically in multi-user mode (standard system runlevel).  
 - Allows the service to start on boot after running `systemctl enable renderer.service`.
-
-#### Starting the systemd daemon
-After saving the service file:
-
-```bash
-sudo systemctl daemon-reexec
-sudo systemctl enable renderer.service
-sudo systemctl start renderer.service
-```
-Checking the status:
-```bash
-sudo systemctl status renderer.service
-```
-Logs:
-```bash
-journalctl -u renderer.service
-```
