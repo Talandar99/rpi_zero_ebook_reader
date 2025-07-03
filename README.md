@@ -23,16 +23,16 @@ so I decided I could make a better one. Currently, it’s not perfect, but at le
 - **Refresh time**: Full refresh – 5s, partial refresh – 0.3s  
 
 ### UPS HAT – Backup Power Supply for Raspberry Pi Zero
+
 - **Simultaneous charging and powering** (5V output)
 - **I2C monitoring** of voltage, current, power, and battery status
 - **Battery protection** against overcharge, deep discharge, overload, and short circuit
 - **Easy connection** using pogo spring pins, compatible with other HATs
 
 ### OpenSCAD Case Design
-I created a simple case to limit battery movement.  
-![3D Case Design](rpi_case.scad)
+I created a simple case (in OpenSCAD) to limit battery movement.  
+![rpi_case.scad](rpi_case.scad)
 ![3D Case Design](3d_design.png)
-Fully Assembled:
 ![Fully Assembled Device](assembled.jpg)
 
 ## Flashing image 
@@ -98,8 +98,12 @@ sudo raspi-config
 ```
 ### Enabling SPI – Step 1
 ![SPI Config Step 1](spi1.png)
-
-### Enabling SPI
+### Enabling SPI – Step 1
+![SPI Config Step 2](spi2.png)
+### Enabling SPI – Step 1
+![SPI Config Step 3](spi3.png)
+### Enabling SPI – Step 1
+![SPI Config Step 4](spi4.png)
 
 Reboot the system:
 ```bash
