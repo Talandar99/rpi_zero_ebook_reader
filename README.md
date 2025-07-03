@@ -31,12 +31,18 @@ so I decided I could make a better one. Currently, it’s not perfect, but at le
 - **Easy connection** using pogo spring pins, compatible with other HATs
 
 ### OpenSCAD Case Design
-I created a simple case (in OpenSCAD) to limit battery movement.  
-![rpi_case.scad](rpi_case.scad)
+I created a simple case (in OpenSCAD) to limit battery movement: ![rpi_case.scad](rpi_case.scad)
 ![3D Case Design](3d_design.png)
 ![Fully Assembled Device](assembled.jpg)
 
 ## Flashing image 
+![Flashing 1](flashing_01.jpg)
+![Flashing 2](flashing_02.jpg)
+![Flashing 3](flashing_03.jpg)
+![Flashing 4](flashing_04.jpg)
+![Flashing 5](flashing_05.jpg)
+![Flashing 6](flashing_06.jpg)
+![Flashing 7](flashing_07.jpg)
 
 ## Connecting to Raspberry Pi with ssh
 ### Finding the Raspberry Pi's Address Using Nmap
